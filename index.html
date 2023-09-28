@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mi Sitio Web</title>
+</head>
+<body>
+    <header>
+        <h1>NIPAMA</h1>
+        <h1>ll</h1>
+    </header>
+    <main>
+        <section>
+            <h2>YOUR EMOTIONAL COMPANION</h2>
+            <p>SOMOS TU ACOMPAÑANTE EMOCIONAL</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Registrate a nuestro Sitio Web</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Emoción</title>
+</head>
+<body>
+    <h1>¿Cómo te sientes hoy?</h1>
+    <form id="emocionForm">
+        <label for="emocion">Selecciona tu emoción:</label>
+        <select id="emocion" name="emocion">
+            <option value="feliz">Feliz</option>
+            <option value="triste">Triste</option>
+            <option value="enojado">Enojado</option>
+            <option value="ansioso">Ansioso</option>
+            <option value="neutral">Neutral</option>
+        </select>
+        <input type="submit" value="Consultar">
+    </form>
+
+    <div id="consejos">
+        <h2>Consejos Motivacionales:</h2>
+        <ul id="listaConsejos">
+            <!-- Los consejos se mostrarán aquí -->
+        </ul>
+        <p id="fraseMotivacional">
+            <!-- La frase motivacional se mostrará aquí -->
+        </p>
+    </div>
+
+    <script>
+        document.getElementById("emocionForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita que el formulario se envíe normalmente
+
+            // Obtiene la emoción seleccionada por el usuario
+            const emocion = document.getElementById("emocion").value;
+
+            // Obtiene el elemento HTML donde se mostrarán los consejos
+            const listaConsejos = document.getElementById("listaConsejos");
+
+            // Limpia la lista de consejos y la frase motivacional previa
+            listaConsejos.innerHTML = "";
+            document.getElementById("fraseMotivacional").textContent = "";
+
+            // Define los consejos y frases motivacionales según la emoción
+            const consejosMotivacionales = {
+                feliz: ["Sonríe, la vida es hermosa.", "Disfruta el momento presente.", "Rodéate de personas que te hagan feliz."],
+                triste: ["Habla con alguien de confianza.", "Permite que tus emociones fluyan.", "Recuerda que siempre hay un mañana."],
+                enojado: ["Respira profundamente antes de reaccionar.", "Encuentra formas constructivas de expresar tu enojo.", "No dejes que el enojo controle tus acciones."],
+                ansioso: ["Practica la relajación muscular.", "Haz ejercicio para liberar tensiones.", "Concéntrate en lo que puedes controlar."],
+                neutral: ["Aprovecha el día para hacer cosas que te gusten.", "La neutralidad a veces es un buen punto de partida para encontrar la paz interior."],
+            };
+
+            // Muestra los consejos y una frase motivacional aleatoria
+            consejosMotivacionales[emocion].forEach(consejo => {
+                const li = document.createElement("li");
+                li.textContent = consejo;
+                listaConsejos.appendChild(li);
+            });
+
+            const frasesMotivacionales = {
+                feliz: "La felicidad está en las pequeñas cosas de la vida.",
+                triste: "Cada día es una nueva oportunidad para ser feliz.",
+                enojado: "El enojo es un viento que apaga la lámpara de la mente.",
+                ansioso: "La ansiedad es como una mecedora: te da algo que hacer, pero no te lleva a ningún lado.",
+                neutral: "La neutralidad es el camino hacia la tranquilidad."
+            };
+
+            document.getElementById("fraseMotivacional").textContent = frasesMotivacionales[emocion];
+        });
+    </script>
+</body>
+</html>
+    
