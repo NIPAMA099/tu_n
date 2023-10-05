@@ -7,7 +7,7 @@ body {
 
 body {
     /* Establece la imagen como fondo */
-    background-image: url(https://i.pinimg.com/564x/72/81/e3/7281e39b3ae453751039d3edba8a94f8.jpg);
+    background-image: url(https://i.pinimg.com/564x/08/82/8c/08828c750c1e91ff3e8d4ae1d41a7546.jpg);
     
     /* Configura cómo se muestra la imagen de fondo */
     background-size: cover; /* Cubre todo el fondo */
@@ -32,19 +32,16 @@ main {
 }
 
 h1 {
-    font-size: 88px;
-    color: #45f3ff;
+    font-size: 85px;
 }
 
 h2 {
     font-size: 50px;
     margin-top: 20px;
-    color: #ffffff;
 }
 
 p {
     font-size: 24px;
-    color: #ffffff;
 }
 
 footer {
