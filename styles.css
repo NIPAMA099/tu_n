@@ -5,9 +5,22 @@ body {
     padding: 30;
 }
 
+body {
+    /* Establece la imagen como fondo */
+    background-image: url(https://i.pinimg.com/564x/72/81/e3/7281e39b3ae453751039d3edba8a94f8.jpg);
+    
+    /* Configura cómo se muestra la imagen de fondo */
+    background-size: cover; /* Cubre todo el fondo */
+    background-repeat: no-repeat; /* No se repite la imagen */
+    background-attachment: fixed; /* Fija la imagen en la ventana gráfica */
+    
+    /* Configura el color de fondo en caso de que la imagen no se cargue o sea transparente */
+    background-color: #f0f0f0; /* Color de fondo de respaldo */
+  }
+
 header {
-    background-color: hsla(308, 83%, 61%, 0.157);
-    color: #09cddb;
+    
+    color: #b4007e;
     text-align: center;
     padding: 200px;
 }
@@ -19,16 +32,19 @@ main {
 }
 
 h1 {
-    font-size: 95px;
+    font-size: 88px;
+    color: #45f3ff;
 }
 
 h2 {
     font-size: 50px;
     margin-top: 20px;
+    color: #ffffff;
 }
 
 p {
     font-size: 24px;
+    color: #ffffff;
 }
 
 footer {
